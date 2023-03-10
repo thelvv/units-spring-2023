@@ -2,139 +2,63 @@ import { applyCategories } from '../applyCategories';
 import { Product } from '../../types';
 
 describe('test apply categories function', () => {
+    const testProduct: Product = {
+        id: 1,
+        name: 'test',
+        category: 'Одежда',
+        description: 'test',
+        price: 100,
+        priceSymbol: '₽',
+    };
+
     it('should return empty array with empty input', () => {
-        expect(applyCategories([], [])).toStrictEqual([]);
+        expect(applyCategories([], [])).toEqual([]);
     });
 
     it('should return all products with no filters', () => {
-        const productExample: Product = {
-            id: 1,
-            name: 'name',
-            description: 'desc',
-            price: 1,
-            priceSymbol: '$',
-            imgUrl: 'test',
-            category: 'Электроника',
-        };
-        expect(
-            applyCategories([productExample, productExample], [])
-        ).toStrictEqual([productExample, productExample]);
+        expect(applyCategories([testProduct, testProduct], [])).toEqual([testProduct, testProduct]);
     });
 
     it('should return only products which match with filters (1 filter)', () => {
-        const productHome: Product = {
-            id: 1,
-            name: 'name',
-            description: 'desc',
-            price: 1,
-            priceSymbol: '$',
-            imgUrl: 'test',
-            category: 'Для дома',
-        };
-
-        const productElectronics: Product = {
-            id: 2,
-            name: 'name',
-            description: 'desc',
-            price: 1,
-            priceSymbol: '$',
-            imgUrl: 'test',
-            category: 'Электроника',
-        };
-
-        const productClothes: Product = {
-            id: 3,
-            name: 'name',
-            description: 'desc',
-            price: 1,
-            priceSymbol: '$',
-            imgUrl: 'test',
-            category: 'Одежда',
-        };
-
         expect(
             applyCategories(
-                [productElectronics, productHome, productClothes],
+                [
+                    testProduct,
+                    { ...testProduct, category: 'Электроника' },
+                    { ...testProduct, category: 'Для дома' },
+                ],
                 ['Электроника']
             )
-        ).toStrictEqual([productElectronics]);
+        ).toEqual([{ ...testProduct, category: 'Электроника' }]);
     });
 
     it('should return only products which match with filters (2 filters)', () => {
-        const productHome: Product = {
-            id: 1,
-            name: 'name',
-            description: 'desc',
-            price: 1,
-            priceSymbol: '$',
-            imgUrl: 'test',
-            category: 'Для дома',
-        };
-
-        const productElectronics: Product = {
-            id: 2,
-            name: 'name',
-            description: 'desc',
-            price: 1,
-            priceSymbol: '$',
-            imgUrl: 'test',
-            category: 'Электроника',
-        };
-
-        const productClothes: Product = {
-            id: 3,
-            name: 'name',
-            description: 'desc',
-            price: 1,
-            priceSymbol: '$',
-            imgUrl: 'test',
-            category: 'Одежда',
-        };
-
         expect(
             applyCategories(
-                [productElectronics, productHome, productClothes],
+                [
+                    testProduct,
+                    { ...testProduct, category: 'Электроника' },
+                    { ...testProduct, category: 'Для дома' },
+                ],
                 ['Электроника', 'Одежда']
             )
-        ).toStrictEqual([productElectronics, productClothes]);
+        ).toEqual([testProduct, { ...testProduct, category: 'Электроника' }]);
     });
 
     it('should return only products which match with filters (3 filters)', () => {
-        const productHome: Product = {
-            id: 1,
-            name: 'name',
-            description: 'desc',
-            price: 1,
-            priceSymbol: '$',
-            imgUrl: 'test',
-            category: 'Для дома',
-        };
-
-        const productElectronics: Product = {
-            id: 2,
-            name: 'name',
-            description: 'desc',
-            price: 1,
-            priceSymbol: '$',
-            imgUrl: 'test',
-            category: 'Электроника',
-        };
-
-        const productClothes: Product = {
-            id: 3,
-            name: 'name',
-            description: 'desc',
-            price: 1,
-            priceSymbol: '$',
-            imgUrl: 'test',
-            category: 'Одежда',
-        };
-
         expect(
             applyCategories(
-                [productElectronics, productHome, productClothes],
+                [
+                    testProduct,
+                    { ...testProduct, category: 'Электроника' },
+                    { ...testProduct, category: 'Для дома' },
+                ],
                 ['Электроника', 'Для дома', 'Одежда']
             )
-        ).toStrictEqual([productElectronics, productHome, productClothes]);
+        ).toEqual([
+            testProduct,
+            { ...testProduct, category: 'Электроника' },
+            { ...testProduct, category: 'Для дома' },
+        ]);
     });
 });
