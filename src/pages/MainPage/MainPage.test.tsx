@@ -3,6 +3,7 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MainPage } from './MainPage';
+jest.mock('../../hooks/useCurrentTime');
 
 afterEach(jest.clearAllMocks);
 describe('MainPage render', () => {
@@ -26,7 +27,7 @@ describe('MainPage render', () => {
     describe('sorting by category', () => {
         const categories = ['Электроника', 'Для дома', 'Одежда'];
         for (const category of categories) {
-            it(`should filter by "${category}" category`, () => {
+            it(`should filter by '${category}' category`, () => {
                 const rendered = render(<MainPage />);
                 const rendered_category = rendered
                     .getAllByText(category)
