@@ -97,7 +97,7 @@ exports[`MainPage render Should sort after button click 1`] = `
             <h1
               class="product-card__price"
             >
-              1 000 ₽
+              1,000 ₽
             </h1>
             <div
               class="product-card__category"
@@ -125,7 +125,7 @@ exports[`MainPage render Should sort after button click 1`] = `
             <h1
               class="product-card__price"
             >
-              7 000 ₽
+              7,000 ₽
             </h1>
             <div
               class="product-card__category"
@@ -264,7 +264,7 @@ exports[`MainPage render Should sort after button click 1`] = `
           <h1
             class="product-card__price"
           >
-            1 000 ₽
+            1,000 ₽
           </h1>
           <div
             class="product-card__category"
@@ -292,7 +292,7 @@ exports[`MainPage render Should sort after button click 1`] = `
           <h1
             class="product-card__price"
           >
-            7 000 ₽
+            7,000 ₽
           </h1>
           <div
             class="product-card__category"
@@ -488,7 +488,7 @@ exports[`MainPage render Should sort after button click 2`] = `
             <h1
               class="product-card__price"
             >
-              7 000 ₽
+              7,000 ₽
             </h1>
             <div
               class="product-card__category"
@@ -516,7 +516,7 @@ exports[`MainPage render Should sort after button click 2`] = `
             <h1
               class="product-card__price"
             >
-              1 000 ₽
+              1,000 ₽
             </h1>
             <div
               class="product-card__category"
@@ -655,7 +655,7 @@ exports[`MainPage render Should sort after button click 2`] = `
           <h1
             class="product-card__price"
           >
-            7 000 ₽
+            7,000 ₽
           </h1>
           <div
             class="product-card__category"
@@ -683,7 +683,7 @@ exports[`MainPage render Should sort after button click 2`] = `
           <h1
             class="product-card__price"
           >
-            1 000 ₽
+            1,000 ₽
           </h1>
           <div
             class="product-card__category"
@@ -879,7 +879,7 @@ exports[`MainPage render Should sort after button click 3`] = `
             <h1
               class="product-card__price"
             >
-              1 000 ₽
+              1,000 ₽
             </h1>
             <div
               class="product-card__category"
@@ -941,7 +941,7 @@ exports[`MainPage render Should sort after button click 3`] = `
             <h1
               class="product-card__price"
             >
-              7 000 ₽
+              7,000 ₽
             </h1>
             <div
               class="product-card__category"
@@ -1046,7 +1046,7 @@ exports[`MainPage render Should sort after button click 3`] = `
           <h1
             class="product-card__price"
           >
-            1 000 ₽
+            1,000 ₽
           </h1>
           <div
             class="product-card__category"
@@ -1108,7 +1108,7 @@ exports[`MainPage render Should sort after button click 3`] = `
           <h1
             class="product-card__price"
           >
-            7 000 ₽
+            7,000 ₽
           </h1>
           <div
             class="product-card__category"
@@ -1266,7 +1266,7 @@ exports[`MainPage render should render correctly 1`] = `
         <h1
           class="product-card__price"
         >
-          1 000 ₽
+          1,000 ₽
         </h1>
         <div
           class="product-card__category"
@@ -1328,7 +1328,7 @@ exports[`MainPage render should render correctly 1`] = `
         <h1
           class="product-card__price"
         >
-          7 000 ₽
+          7,000 ₽
         </h1>
         <div
           class="product-card__category"
@@ -1615,7 +1615,7 @@ exports[`MainPage render sorting by category should filter by 'Одежда' cat
             <h1
               class="product-card__price"
             >
-              1 000 ₽
+              1,000 ₽
             </h1>
             <div
               class="product-card__category"
@@ -1686,7 +1686,7 @@ exports[`MainPage render sorting by category should filter by 'Одежда' cat
           <h1
             class="product-card__price"
           >
-            1 000 ₽
+            1,000 ₽
           </h1>
           <div
             class="product-card__category"
@@ -1848,7 +1848,7 @@ exports[`MainPage render sorting by category should filter by 'Электрон�
             <h1
               class="product-card__price"
             >
-              7 000 ₽
+              7,000 ₽
             </h1>
             <div
               class="product-card__category"
@@ -1953,7 +1953,7 @@ exports[`MainPage render sorting by category should filter by 'Электрон�
           <h1
             class="product-card__price"
           >
-            7 000 ₽
+            7,000 ₽
           </h1>
           <div
             class="product-card__category"
