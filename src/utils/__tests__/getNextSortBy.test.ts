@@ -1,15 +1,12 @@
 import { getNextSortBy } from '../getNextSortBy';
+import type { SortBy } from '../../types';
 
 describe('test get next sort by function', () => {
-    it('should return ascending sort after default', () => {
-        expect(getNextSortBy('по умолчанию')).toBe('по возрастанию цены');
-    });
-
-    it('should return descending sort after ascending sort', () => {
-        expect(getNextSortBy('по возрастанию цены')).toBe('по убыванию цены');
-    });
-
-    it('should return default sort after descending sort', () => {
-        expect(getNextSortBy('по убыванию цены')).toBe('по умолчанию');
+    it.each([
+        ['по умолчанию', 'по возрастанию цены'],
+        ['по возрастанию цены', 'по убыванию цены'],
+        ['по убыванию цены', 'по умолчанию'],
+    ])('should be %after after %before sort type', (before, after) => {
+        expect(getNextSortBy(before as SortBy)).toBe(after as SortBy);
     });
 });

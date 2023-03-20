@@ -41,7 +41,6 @@ exports[`MainPage render Should sort after button click 1`] = `
             data-testid="sort-button"
           >
             Сортировать 
-            по возрастанию цены
           </button>
         </div>
         <div
@@ -200,7 +199,6 @@ exports[`MainPage render Should sort after button click 1`] = `
           data-testid="sort-button"
         >
           Сортировать 
-          по возрастанию цены
         </button>
       </div>
       <div
